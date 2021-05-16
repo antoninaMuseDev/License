@@ -1,24 +1,21 @@
 .rules {
     display: flex;
     flex-direction: column;
-    width: 1050px;
+    max-width: 1050px;
     margin: auto;
     margin-top: 77px;
-    background: #e5e5e5;
-
     &__text-m {
         font-style: normal;
         font-weight: normal;
         font-size: 18px;
         line-height: 21px;
-
         color: #000000;
     }
     &__img {
         position: absolute;
-        left: 498px;
+        left: calc(50% - 20px);
         top: -32px;
-        &_top{
+        &_top {
             top: -20px;
         }
     }
@@ -28,11 +25,7 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
-
         color: #5c6272;
-        padding-left: 40px;
-        padding-top: 40px;
-        padding-right: 55px;
     }
 
     &__text-l {
@@ -41,8 +34,8 @@
         font-weight: normal;
         font-size: 22px;
         line-height: 26px;
-
         color: #000000;
+        max-width: 1006px;
     }
 }
 .rules-inner {
@@ -53,9 +46,19 @@
     margin-top: 78px;
     border: 2px solid #c4c9d5;
     box-sizing: border-box;
-    height: 156px;
     align-items: center;
     justify-content: center;
+    padding: 40px 55px 40px 40px;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -20px;
+        background-color: #ffffff;
+        width: 80px;
+        height: 35px;
+        left: calc(50% - 40px);
+    }
 }
 
 .rules-list {
@@ -63,25 +66,29 @@
     justify-content: space-between;
     &__item {
         display: block;
-        width: 500px;
-        height: 281px;
+        max-width: 500px;
         justify-content: center;
         margin-top: 40px;
         align-items: center;
-
         background: linear-gradient(0deg, #eff2f8, #eff2f8), url(image.png);
         border-radius: 19.3327px;
+        padding: 30px 60px 50px 60px;
     }
 
     &__item-text-num {
-        margin-top: 51px;
         font-style: normal;
         font-weight: 900;
         font-size: 32.2212px;
         line-height: 38px;
-        text-align: center;
-
+        width: 69.6px;
+        height: 69.6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        border-radius: 100px;
         color: #5374ca;
+        margin: auto;
     }
 
     &__item-text {
@@ -90,10 +97,11 @@
         font-weight: normal;
         font-size: 18px;
         line-height: 120%;
-
-        /* or 22px */
         text-align: center;
-
         color: #000000;
+        &_sm {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
     }
 }

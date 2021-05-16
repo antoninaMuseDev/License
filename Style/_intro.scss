@@ -2,25 +2,27 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    width: 1513px;
+    max-width: 1513px;
     height: 565px;
     background: url("../img/intro-backgraund.png") no-repeat;
-
+    margin-top: 33px;
+    background-position: center;
+    &__inner {
+        width: 1050px;
+        margin: auto;
+    }
     &__title {
         margin-top: 88px;
-        margin-left: 265px;
         font-style: normal;
         font-weight: bold;
         font-size: 39px;
         line-height: 46px;
-
         color: #ffffff;
     }
 
     &__text {
         display: block;
         margin-top: 57px;
-        margin-left: 265px;
         font-style: normal;
         font-weight: normal;
         font-size: 26px;
@@ -32,16 +34,8 @@
     &__form {
         display: flex;
         width: 570px;
-        margin-left: 265px;
         justify-content: space-between;
-        margin-top: 68px;
-    }
-
-    &__form-label {
-        background: #ffffff;
-        border-radius: 13.0492px;
-        width: 337px;
-        height: 63px;
+        margin-top: 100px;
     }
 
     &__form-input {
@@ -49,13 +43,15 @@
         font-weight: normal;
         font-size: 17.6164px;
         line-height: 21px;
-
-        /* identical to box height */
-
         color: #878787;
         padding-left: 23px;
-        padding-top: 22px;
-       text-decoration: overline;
+        border-radius: 13.0492px;
+        width: 337.32px;
+        height: 63.29px;
+        border: none;
+        &::placeholder {
+            opacity: 1;
+        }
     }
 
     &__form-button {
@@ -65,11 +61,10 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
-
-        /* identical to box height */
-
+        border: none;
         color: #ffffff;
         height: 63px;
         width: 208px;
+        cursor: pointer;
     }
 }
