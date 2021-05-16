@@ -18,6 +18,9 @@
         position: absolute;
         left: 498px;
         top: -32px;
+        &_top{
+            top: -20px;
+        }
     }
 
     &__text-grey {

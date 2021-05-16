@@ -78,7 +78,8 @@
 
     &__text-num {
         position: absolute;
-        
+        top: 10px;
+        left: 15px;
         font-style: normal;
         font-weight: bold;
         font-size: 25px;
@@ -109,8 +110,11 @@
         height: 50px;
         margin-top: 108px;
         align-items: center;
+        &_before{
+
+        }
 }
-.license-interval-inner-num::before {
+.license-interval-inner-num_before::before {
     display: block;
     content: "";
     position: absolute;
