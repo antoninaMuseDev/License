@@ -3,10 +3,11 @@
     flex-direction: column;
     margin: auto;
     max-width: 1513px;
-    height: 565px;
+    padding-bottom: 90px;
     background: url("../img/intro-backgraund.png") no-repeat;
     margin-top: 33px;
     background-position: center;
+    background-size: cover;
     &__inner {
         width: 1050px;
         margin: auto;
@@ -27,13 +28,12 @@
         font-weight: normal;
         font-size: 26px;
         line-height: 31px;
-
         color: #ffffff;
     }
 
     &__form {
         display: flex;
-        width: 570px;
+        max-width: 570px;
         justify-content: space-between;
         margin-top: 100px;
     }
@@ -66,5 +66,28 @@
         height: 63px;
         width: 208px;
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .intro {
+        padding-left: 20px;
+        padding-right: 20px;
+        &__inner {
+            max-width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .intro {
+        padding-bottom: 30px;
+        &__form {
+            flex-direction: column;
+            margin-top: 60px;
+            &-button {
+                margin-top: 30px;
+            }
+        }
     }
 }

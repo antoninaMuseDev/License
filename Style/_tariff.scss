@@ -2,19 +2,15 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1050px;
+    max-width: 1050px;
     margin: auto;
-    margin-top: 95px;
-  
+    margin-top: 70px;
+    margin-bottom: 50px;
     &__title {
-        margin-top: 44px;
         font-weight: bold;
         font-size: 35px;
         line-height: 41px;
-
-        /* identical to box height */
         text-align: center;
-
         color: #000000;
     }
 
@@ -23,40 +19,42 @@
         font-weight: normal;
         font-size: 22px;
         line-height: 26px;
-
         color: #000000;
+        max-width: 692px;
     }
 }
 .tariff-form {
     display: flex;
     flex-direction: column;
-    margin-top: 22px;
-    row-gap: 18px;
-
+    margin-top: 50px;
+    background: linear-gradient(0deg, #ffffff, #ffffff), url(image.png);
+    box-shadow: 0px 2.60984px 26.0984px #e6e8ed;
+    border-radius: 19.5738px;
+    padding: 40px 60px 40px 60px;
     &__text {
         font-weight: 500;
         font-size: 22px;
         line-height: 26px;
-
         color: #000000;
-        margin-top: 39px;
+        margin-bottom: 40px;
     }
 
-    &__label {
-    }
     &__label-input {
         display: block;
         font-weight: normal;
         font-size: 16px;
         line-height: 19px;
-
         color: #878787;
         border: 1px solid #b0b0b0;
         box-sizing: border-box;
         border-radius: 10px;
-        width: 800px;
+        width: 100%;
         height: 50px;
         padding-left: 20px;
+        margin-bottom: 20px;
+        &::placeholder {
+            opacity: 1;
+        }
     }
 
     &__button {
@@ -64,16 +62,22 @@
         font-weight: 500;
         font-size: 18px;
         line-height: 21px;
-
-        /* identical to box height */
-
         color: #ffffff;
         background: #5374ca;
         border-radius: 13px;
-
+        border: none;
+        cursor: pointer;
         &_size {
             width: 228px;
             height: 54px;
+        }
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .tariff {
+        &-form {
+            padding: 15px;
         }
     }
 }
