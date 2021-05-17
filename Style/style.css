@@ -344,6 +344,7 @@
   border: 1px solid #cccccc;
   margin-top: 50px;
   border-radius: 19.5738px;
+  overflow: hidden;
 }
 
 .license-list__item-inner {
@@ -369,7 +370,6 @@
 }
 
 .license-list__item-img {
-  border-radius: 0px 20px 20px 0px;
   max-width: 532px;
   max-height: 210px;
 }
@@ -523,6 +523,37 @@
   }
   .license-list-card__item-card_width {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .license-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .license-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 550px;
+  }
+  .license-list__item-text {
+    margin-left: 15px;
+  }
+  .license-list__item-inner {
+    width: 100%;
+  }
+  .license-list__item-img {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
