@@ -31,11 +31,56 @@
         color: #ffffff;
     }
 
-    &__form {
-        display: flex;
+    & .b24-form {
         max-width: 570px;
-        justify-content: space-between;
         margin-top: 100px;
+        &-content {
+            bottom: 0;
+            padding: 0;
+        }
+        &-field {
+            margin-bottom: 0 !important;
+            border-radius: 13.0492px !important;
+        }
+        &-btn {
+            height: 63.29px;
+            &-block {
+                height: 63.29px;
+                padding: 0 !important;
+                border-radius: 13.0492px;
+                overflow: hidden;
+                width: 207.48px;
+            }
+        }
+        &-control {
+            background: #ffffff !important;
+            border-radius: 13.0492px !important;
+            width: 337.32px !important;
+            height: 63px !important;
+            &-container {
+                margin-bottom: 0 !important;
+                background: #ffffff !important;
+                border-radius: 13.0492px !important;
+            }
+        }
+        &-input {
+            border-radius: 13.0492px !important;
+        }
+        &-wrapper {
+            min-height: auto;
+            background-color: transparent;
+            border: none !important;
+            padding: 0;
+            box-shadow: none !important;
+            & form {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+    & .b24-form-header-padding,
+    .b24-form-state-container {
+        display: none;
     }
 
     &__form-input {
@@ -82,11 +127,18 @@
 @media screen and (max-width: 660px) {
     .intro {
         padding-bottom: 30px;
-        &__form {
-            flex-direction: column;
-            margin-top: 60px;
-            &-button {
-                margin-top: 30px;
+        & .b24-form {
+            & form {
+                flex-direction: column;
+            }
+            &-control-container {
+                max-width: 509px !important;
+                margin: auto;
+            }
+            &-btn-block {
+                margin: auto;
+                margin-top: 20px !important;
+                max-width: 509px;
             }
         }
     }
